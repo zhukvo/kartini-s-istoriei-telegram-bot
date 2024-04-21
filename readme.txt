@@ -1,6 +1,8 @@
 Программа бот - Картины с историей - t.me/yandex_kartini_bot.
 Автор: Жук Владимир, 2024.
 
+Описание:
+
 Друзья, приветствую вас на моем познавательном телеграмм канале. Позвольте представиться - меня зовут Скалик. Я бот-искусствовед.
 Буду рассказывать о картинах и придумывать интересные истории. Будем знакомы. Подписывайтесь на мой канал.
 
@@ -10,11 +12,18 @@
 Отправь /unsubscribe чтобы отписаться.
 Отправь /help чтобы получить подскажку
 
-Данные для программы загружаются c сайта  https://kartinysistoriey.ru
+Установка и запуск:
 
-Перед запуском надо прописать Token.
+Перед запуском надо:
+1. Установить необходимые пакеты:
+    * pip install BeautifulSoup4
+    * pip install python-telegram-bot
+    * pip install python-telegram-bot[job-queue]
+2. Получить и прописать Token. 
+3. For a description of the Bot API, see this page: https://core.telegram.org/bots/api
 
-Необходимые пакеты:
-pip install BeautifulSoup4
-pip install python-telegram-bot
-pip install python-telegram-bot[job-queue]
+Программа содержит:
+1) Файла "requirements.txt";
+2) Работу с контекстом пользователя;
+3) Загрузку и использование медиафайлов;
+4) Использование стороннего API. Данные для программы загружаются c сайта  https://kartinysistoriey.ru
