@@ -17,17 +17,16 @@ from telegram.ext import (
 import requests
 from bs4 import BeautifulSoup
 
-TOKEN = ""
 
 STORY, NEWSTORY, UPLOADPHOTO, SAVESTORY = range(4)
 
-# Enable logging
+
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
 )
 
 
-# set higher logging level for httpx to avoid all GET and POST requests being logged
+
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
 logger = logging.getLogger(__name__)
@@ -47,7 +46,7 @@ def decl(number: int, titles: list):
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> int:
     await update.message.reply_text(
         "Друзья, приветствую вас на моем познавательном телеграмм канале. Позвольте представиться - меня зовут Скалик. Я бот-искусствовед.\
- Буду рассказывать о картинах и придумывать интересные истории. Будем знакомы. Подписывайтесь на мой канал.\n\n"
+ Вас ждут увлекательные рассказы о картинах и истории их создания. Подписывайтесь на мой канал.\n\n"
         "Отправь /story чтобы послушать мою новую историю.\n"
         "Отправь /newstory чтобы рассказать свою историю.\n"
         "Отправь /subscribe <minutes> чтобы подписаться на новые истории.\n"
